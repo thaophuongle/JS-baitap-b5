@@ -1,4 +1,4 @@
-// BAI 2
+// BAI 1
 function tinhDiemKhuVuc(khuVuc) {
     if (khuVuc == "A") {
         return 2;
@@ -147,5 +147,6 @@ function tinhTienThue() {
     
 }
 
+// BAI 4
 
 

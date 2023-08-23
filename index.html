@@ -75,6 +75,35 @@
           </div>
           <button id="taxBtn" onclick="tinhTienThue()" class="btn btn-primary">Tính tiền điện</button>
           <div id="taxHandle"></div>
+
+          <br><br><br>
+          <h2>Tính tiền cáp</h2>
+          <form>
+            <div class="form-row">
+              <div class="col">
+                <div class="form-group chonKhachHang">
+                  <select class="form-control" name="" id="">
+                    <option selected>Chọn loại khách hàng</option>
+                    <option id="" value="A">Nhà dân</option>
+                    <option id="" value="B">Doanh Nghiệp</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col">
+                <input type="text" id="" class="form-control" placeholder="Nhập mã khách hàng">
+              </div>
+              <div class="col">
+                <input type="number" id="" class="form-control" placeholder="Số kênh cao cấp">
+              </div>
+            </div>
+            <div class="form-row">
+                <div class="col-4">
+                  <input type="number" id="" class="form-control" placeholder="Số kết nối">
+                </div>
+              </div>
+          <button id="cableBtn" onclick="tinhTienCap()" class="btn btn-primary" style="margin-top: 20px;">Kết quả</button>
+          <div id="cableHandle"></div>
+
       </div>
     <!-- Optional JavaScript -->
     <script src="./js/index.js"></script>
