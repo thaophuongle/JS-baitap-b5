@@ -149,4 +149,41 @@ function tinhTienThue() {
 
 // BAI 4
 
+function tinhTienCap() {
+    var khachHang = document.querySelector(".chonKhachHang select option:checked").value;
+    var maKhachHang = +document.getElementById("maKhachHang").value;
+    var phiXuLyHoaDon;
+    var phiDichVuCoBan = 20.5;
+    var soKenh = +document.getElementById('soKenh').value;
+    var soKetNoi = +document.getElementById('soKetNoi').value
+    var tienCap;
 
+    if (khachHang == "nhaDan"){
+       
+        phiXuLyHoaDon = 4.5;
+       tienCap = phiXuLyHoaDon + phiDichVuCoBan + soKenh * 7.5;
+    }
+    else if (khachHang == "doanhNghiep"){
+        phiXuLyHoaDon = 15;
+        if (soKetNoi >0 && soKetNoi <= 10){
+            tienCap = phiXuLyHoaDon + 50 * soKenh + 75;
+        }
+        else {
+            tienCap = phiXuLyHoaDon + 50 * soKenh + 75 + soKetNoi * 5;
+        }
+
+    }
+    else {
+       alert("Hãy chọn loại khách hàng");
+    }
+
+    console.log(tienCap);
+    document.getElementById('taxHandle').innerHTML = `
+        <div>
+            <p>Họ tên: ${maKhachHang}</p>
+            <p>Tiền cáp: ${new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(tienCap)}d</p>
+        </div>
+        `
+        ;
+
+}
